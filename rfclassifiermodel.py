@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 
 # Load your dataset
-data = pd.read_csv(r"C:\Users\Clyde\Downloads\Netflix Userbase.csv")
+data = pd.read_csv("Netflix Userbase.csv")
 print(data.head())
 print(data.info())
 
