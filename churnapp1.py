@@ -20,7 +20,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Load your pre-trained model
-model = joblib.load(r'C:\Users\Clyde\Documents\my_streamlit_app\RFClassifier.pkl')
+model = joblib.load('RFClassifier.pkl')
 
 st.title('Customer Churn Prediction and Analysis')
 
@@ -72,7 +72,7 @@ st.write(f"📊 Probability of Churn: {prediction_proba[0][1]:.2f}")
 # Load and preprocess data for visualization
 @st.cache_data
 def load_and_preprocess_data():
-    data = pd.read_csv(r"C:\Users\Clyde\Downloads\Netflix Userbase.csv")
+    data = pd.read_csv("Netflix Userbase.csv")
     data['Last Payment Date'] = pd.to_datetime(data['Last Payment Date'], dayfirst=True)
     data['Join Date'] = pd.to_datetime(data['Join Date'], dayfirst=True)
     end_date = datetime.strptime('07-12-2023', '%d-%m-%Y')
